@@ -23,6 +23,8 @@ Launch the dev tools in your browser (f12).
 
 Navigate to the "Auth Inspector" tab.
 
+*** You must have the Auth Inspector tab open to capture network requests ***
+
 Navigate through some webapp that uses authentication requests.
 
 Any request that has an authentication header will be displayed in the "Auth Inspector" tab.
