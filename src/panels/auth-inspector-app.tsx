@@ -61,7 +61,7 @@ const TableComponent: React.FC<TableRows> = ({ data }) => {
                     {expandedRows.has(index) && (
                         <tr>
                             <td colSpan={4}>
-                                <div>
+                                <div className="expanded-row-content">
                                     <strong>URL:</strong> {row.url}<br/>
                                     <strong>Type:</strong> {row.type}<br/>
                                     <strong>Header:</strong> <br/>
