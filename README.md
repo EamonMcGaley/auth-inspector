@@ -42,3 +42,6 @@ Build using https://crxjs.dev/vite-plugin/. This is a Vite plugin that allows yo
 - Add tests - currently there are no tests
 - Refactor - first draft is a bit messy
 - CSS - make it look nicer
+- Fit panel to dev panel pane - too much scrolling
+- Clear table - useful for refreshing a page
+- filter table - nice to have
