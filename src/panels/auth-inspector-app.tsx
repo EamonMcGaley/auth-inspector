@@ -6,9 +6,10 @@ interface TableRow {
 }
 interface TableRows {
     data: Array<TableRow>;
+    setData: React.Dispatch<React.SetStateAction<TableRow[]>>;
 }
 
-const TableComponent: React.FC<TableRows> = ({ data }) => {
+const TableComponent: React.FC<TableRows> = ({ data, setData }) => {
     const [expandedRows, setExpandedRows] = useState<Set<number>>(new Set());
 
     const handleCopy = async (value: string) => {
@@ -36,8 +37,13 @@ const TableComponent: React.FC<TableRows> = ({ data }) => {
         });
     };
 
+    const handleClearData = () => {
+        setData([]);
+    };
+
     return (
         <div className="table-container">
+            <button onClick={handleClearData}>Clear Data</button>
             <table>
                 <thead>
                 <tr>
@@ -107,7 +113,7 @@ const AuthInspector: React.FC = () => {
     }, []);
     return (
         <div>
-            <TableComponent data={data} />
+            <TableComponent data={data} setData={setData} />
         </div>
     );
 };
